@@ -9,7 +9,6 @@ Cartridge-Version: 1.6.0
 Cartridge-Vendor: mdsakalu
 
 Categories:
-  - web_framework
   - service
 
 Provides:
