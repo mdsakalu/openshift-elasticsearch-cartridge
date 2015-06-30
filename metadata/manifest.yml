@@ -10,6 +10,9 @@ Cartridge-Vendor: mdsakalu
 
 Categories:
   - service
+  - database
+  - embedded
+  - nosql
 
 Provides:
   - elasticsearch
@@ -18,10 +21,8 @@ Provides:
 Publishes:
   publish-unicast-host:
     Type: NET_TCP:elasticsearch-cluster-info
-  publish-http-url:
-    Type: NET_TCP:httpd-proxy-info
-  publish-gear-endpoint:
-    Type: NET_TCP:gear-endpoint-info
+  publish-db-connection-info:
+    Type: NET_TCP:db-connection-info
 
 Subscribes:
   set-unicast-hosts:
@@ -38,12 +39,10 @@ Endpoints:
     Public-Port-Name:  PROXY_PORT
     Protocols:
     - http
-    Mappings:
-    - Frontend: ''
-      Backend: ''
 
   - Private-IP-Name:   IP
     Private-Port-Name: TRANSPORT_PORT
     Private-Port:      9300
     Public-Port-Name:  TRANSPORT_PROXY_PORT
+    
 Source-Url: https://github.com/mdsakalu/openshift-elasticsearch-cartridge/archive/master.zip
