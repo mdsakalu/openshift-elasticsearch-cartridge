@@ -22,7 +22,7 @@ Publishes:
   publish-unicast-host:
     Type: NET_TCP:elasticsearch-cluster-info
   publish-db-connection-info:
-    Type: NET_TCP:db-connection-info
+    Type: ENV:NET_TCP:nosqldb:connection-info
 
 Subscribes:
   set-unicast-hosts:
